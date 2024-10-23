@@ -22,8 +22,4 @@ public class AppFrame extends JFrame{
     	 this.add(btnPannel, BorderLayout.SOUTH);
     	 
      }
-}package classess;
-
-public class AppFrame {
-
 }
