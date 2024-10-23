@@ -17,7 +17,7 @@ public class ButtonPannel extends JPanel {
 	Border emptyBorder = BorderFactory.createEmptyBorder();
 	
 	//Constructor
-	ButtonPanel () {
+	ButtonPannel () {
 		this.setPreferredSize(new Dimension(400,60));
 		
 		addTask = new JButton("Add Task");
