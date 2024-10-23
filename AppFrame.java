@@ -16,7 +16,7 @@ public class AppFrame extends JFrame{
     	 this.setVisible(true);
     	 
     	 title = new titleBar();
-    	 list = new list();
+    	 List = new list();
     	 btnPannel = new ButtonPannel();
     	 this.add(title,BorderLayout.NORTH);
     	 this.add(btnPannel, BorderLayout.SOUTH);
