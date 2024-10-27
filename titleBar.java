@@ -18,3 +18,4 @@ public class titleBar extends JPanel{
 	   this.add(titleText);
    }
 }
+
