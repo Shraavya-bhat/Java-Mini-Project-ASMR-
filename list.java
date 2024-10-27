@@ -1,4 +1,7 @@
 package classess;
+import java.awt.Component;
+import java.awt.GridLayout;
+
 import javax.swing.JPanel;
 public class list extends JPanel{
   list(){
