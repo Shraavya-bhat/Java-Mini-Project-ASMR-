@@ -1,6 +1,8 @@
 package classess;
 
 import java.awt.BorderLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -27,24 +29,35 @@ public class AppFrame extends JFrame{
     	 this.add(title,BorderLayout.NORTH);
     	 this.add(btnPannel, BorderLayout.SOUTH);
 
-	 this.add(list,BorderLayout.CENTER);
+	 this.add(List,BorderLayout.CENTER);
 		
-	 addTask = btnPanel.getAddTask();
-         clear = btnPanel.getClear();
+	 addTask = btnPannel.getAddTask();
+         clear = btnPannel.getClear();
 
 	 addListeners();	
     	 
      }
 	public void addListeners()
 	{
-		addTsk.addMouseListener(new MouseAdapter())
+		addTask.addMouseMotionListener(new MouseAdapter()
 		{
-			@override
+			@Override
 			public void mousePressed(MouseEvent e)
 			{
 				Task task = new Task();
-			        list.add(task);
-			revalidate():
+			        List.add(task);
+			        List.updateNumbers();
+			        task.getDone().addMouseListener(new MouseAdapter()
+			        {
+			        	@Override
+			        	public void mousePressed(MouseEvent e)
+			        	{
+			        		task.changeState();
+			        		revalidate();
+			        	}
+			        });       
+			revalidate();
 			}
-	}};
+	});
+	};
 }
